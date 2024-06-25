@@ -1,5 +1,6 @@
 {
   "imports": {
-    "h3": "https://esm.sh/h3@1.11.1"
+    "h3": "https://esm.sh/h3@1.11.1",
+    "graphql-yoga": "npm:graphql-yoga@5.4.0"
   }
 }
