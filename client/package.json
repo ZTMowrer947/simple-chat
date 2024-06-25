@@ -7,6 +7,7 @@
     "@types/node": "^20.14.9",
     "@types/webpack": "^5.28.5",
     "typescript": "^5.5.2",
+    "vue": "^3.4.30",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
