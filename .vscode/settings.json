@@ -1,3 +1,9 @@
 {
-  "deno.enablePaths": ["./server"]
+  "deno.enablePaths": ["./server"],
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.tsdk": "client/.yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
