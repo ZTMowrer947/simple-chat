@@ -1,0 +1,13 @@
+{
+  "name": "simple-chat-server",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.7",
+    "@graphql-codegen/typescript-resolvers": "^4.1.0"
+  },
+  "scripts": {
+    "generate": "graphql-codegen"
+  }
+}
