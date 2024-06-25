@@ -2669,6 +2669,7 @@
     ],
     "packageJson": {
       "dependencies": [
+        "npm:@graphql-codegen/add@^5.0.3",
         "npm:@graphql-codegen/cli@^5.0.2",
         "npm:@graphql-codegen/typescript-resolvers@^4.1.0",
         "npm:@graphql-codegen/typescript@^4.0.7"
