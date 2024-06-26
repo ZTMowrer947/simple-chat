@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "webpack serve",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "lint:es": "eslint --cache --fix .",
+    "lint:pr": "prettier --cache --write .",
+    "lint:style": "stylelint --cache --fix ./**/*.{css,vue}"
   },
   "dependencies": {
     "vue": "^3.4.30"
