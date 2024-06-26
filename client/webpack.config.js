@@ -1,6 +1,8 @@
 import { resolve } from 'node:path';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { VueLoaderPlugin } from 'vue-loader';
+import webpack from 'webpack';
 
 /**
  * @returns {import('webpack-dev-server').WebpackConfiguration}
@@ -25,6 +27,10 @@ export default (_env, argv) => {
     module: {
       rules: [
         {
+          test: /\.vue$/,
+          loader: 'vue-loader',
+        },
+        {
           test: /\.[jt]sx$/,
           loader: 'swc-loader'
         }
@@ -37,6 +43,12 @@ export default (_env, argv) => {
       },
     },
     plugins: [
+      new webpack.DefinePlugin({
+        __VUE_OPTIONS_API__: 'true',
+        __VUE_PROD_DEVTOOLS__: 'false',
+        __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: 'false',
+      }),
+      new VueLoaderPlugin(),
       new HtmlWebpackPlugin({
         title: 'Simple Chat',
         scriptLoading: 'module',
