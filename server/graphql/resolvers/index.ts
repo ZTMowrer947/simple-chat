@@ -16,7 +16,7 @@ export const resolvers = {
     createPost: (_ctx, args) => {
       const newPost = {
         id: createId(),
-        authorName: args.author_name,
+        authorName: args.authorName,
         message: args.message
       } satisfies Post;
 
