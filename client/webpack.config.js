@@ -37,7 +37,7 @@ export default (_env, argv) => {
           loader: 'vue-loader',
         },
         {
-          test: /\.[jt]sx$/,
+          test: /\.[jt]sx?$/,
           loader: 'swc-loader',
         },
         {
