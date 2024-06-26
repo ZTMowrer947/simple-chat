@@ -1,11 +1,3 @@
 {
   "deno.enablePaths": ["./server"],
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-  "typescript.tsdk": "client/.yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "eslint.nodePath": "client/.yarn/sdks",
-  "prettier.prettierPath": "client/.yarn/sdks/prettier/index.cjs",
 }
