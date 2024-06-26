@@ -1,3 +1,18 @@
+type Post {
+  id: ID!
+  authorName: String!
+  message: String!
+}
+
 type Query {
   ok: Boolean!
+  posts: [Post!]!
+}
+
+type Mutation {
+  createPost(author_name: String!, message: String!): Post
+}
+
+type Subscription {
+  postCreated: Post
 }

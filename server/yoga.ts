@@ -21,6 +21,16 @@ async function getTypeDefs(): Promise<string> {
 const resolvers: Resolvers = {
   Query: {
     ok: () => true,
+    posts: () => []
+  },
+  Mutation: {
+    createPost: () => null,
+  },
+  Subscription: {
+    postCreated: {
+      subscribe: async function*() {},
+      resolve: () => null,
+    }
   }
 }
 
