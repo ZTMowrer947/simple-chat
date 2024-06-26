@@ -8,6 +8,6 @@
   "*.vue": [
     "prettier --write --cache",
     "eslint --fix --cache",
-    "styleline --fix --cache"
+    "stylelint --fix --cache"
   ]
 }
