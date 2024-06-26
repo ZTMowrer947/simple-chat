@@ -1,0 +1,13 @@
+{
+  "*.{html,json,yml}": ["prettier --write --cache"],
+  "*.{js,ts,cjs,cts,mjs,mts,jsx,tsx}": [
+    "prettier --write --cache",
+    "eslint --fix --cache"
+  ],
+  "*.css": ["prettier --write --cache", "stylelint --fix --cache"],
+  "*.vue": [
+    "prettier --write --cache",
+    "eslint --fix --cache",
+    "styleline --fix --cache"
+  ]
+}

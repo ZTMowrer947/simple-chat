@@ -8,7 +8,8 @@
     "build": "webpack --mode=production",
     "lint:es": "eslint --cache --fix .",
     "lint:pr": "prettier --cache --write .",
-    "lint:style": "stylelint --cache --fix ./**/*.{css,vue}"
+    "lint:style": "stylelint --cache --fix ./**/*.{css,vue}",
+    "postinstall": "cd .. && husky client/.husky"
   },
   "dependencies": {
     "vue": "^3.4.30"
