@@ -40,6 +40,7 @@ export default (_env, argv) => {
       new HtmlWebpackPlugin({
         title: 'Simple Chat',
         scriptLoading: 'module',
+        template: resolve('src', 'template.html'),
       }),
     ],
   };
