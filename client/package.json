@@ -9,9 +9,11 @@
     "preview": "vite preview",
     "postinstall": "cd .. && husky client/.husky",
     "cy:open": "cypress open",
+    "cy:open-e2e": "cypress open --e2e",
     "test:component": "cypress run --component",
     "cy:e2e": "cypress run --e2e",
-    "test:e2e": "start-test dev http://localhost:5173 cy:e2e"
+    "test:e2e": "start-test dev http://localhost:5173 cy:e2e",
+    "dev:e2e": "start-test dev http://localhost:5173 cy:open-e2e"
   },
   "dependencies": {
     "vue": "^3.4.29"
