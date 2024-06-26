@@ -1796,6 +1796,8 @@ __metadata:
     cypress: "npm:^13.12.0"
     eslint: "npm:9.x"
     eslint-config-prettier: "npm:^9.1.0"
+    eslint-plugin-chai-friendly: "npm:^1.0.0"
+    eslint-plugin-cypress: "npm:^3.3.0"
     eslint-plugin-simple-import-sort: "npm:^12.1.0"
     eslint-plugin-vue: "npm:^9.26.0"
     globals: "npm:^15.6.0"
@@ -2729,6 +2731,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-chai-friendly@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "eslint-plugin-chai-friendly@npm:1.0.0"
+  peerDependencies:
+    eslint: ">=3.0.0"
+  checksum: 10c0/80cded00860a28cd35a6d63ef96148b787aa703c0a9fe788c5d2ec732ba3acea19da9aab09b9337b26a84a97e3e318beadc2897fac14163a87bc870a0b5c3d93
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-cypress@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "eslint-plugin-cypress@npm:3.3.0"
+  dependencies:
+    globals: "npm:^13.20.0"
+  peerDependencies:
+    eslint: ">=7"
+  checksum: 10c0/d149f853c7a57527b204475159c447da2c21aaca44cf602fea9ced45a1cc795d469bff8db14cc9502744ea9b3dbba7363e6ea8391140c7f7f324e2bac7a7031d
+  languageName: node
+  linkType: hard
+
 "eslint-plugin-simple-import-sort@npm:^12.1.0":
   version: 12.1.0
   resolution: "eslint-plugin-simple-import-sort@npm:12.1.0"
@@ -3474,7 +3496,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^13.24.0":
+"globals@npm:^13.20.0, globals@npm:^13.24.0":
   version: 13.24.0
   resolution: "globals@npm:13.24.0"
   dependencies:
