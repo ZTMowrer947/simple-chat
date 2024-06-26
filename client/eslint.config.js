@@ -21,5 +21,14 @@ export default tseslint.config(
       'simple-import-sort/exports': 'warn',
     },
   },
+  {
+    files: ['**/*.{cjs,cts}'],
+    languageOptions: {
+      globals: globals.commonjs
+    },
+    rules: {
+      '@typescript-eslint/no-var-requires': 'off'
+    }
+  },
   configPrettier,
 );
