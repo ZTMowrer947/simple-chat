@@ -9,7 +9,7 @@ import webpack from 'webpack';
  * @returns {import('webpack-dev-server').WebpackConfiguration}
  */
 export default (_env, argv) => {
-  const isProduction = argv.mode === 'production';
+  const isProduction = argv?.mode === 'production';
 
   return {
     entry: resolve('src', 'main.ts'),
