@@ -894,7 +894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.4.30":
+"@vue/compiler-dom@npm:3.4.30, @vue/compiler-dom@npm:^3.4.30":
   version: 3.4.30
   resolution: "@vue/compiler-dom@npm:3.4.30"
   dependencies:
@@ -962,7 +962,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.4.30":
+"@vue/server-renderer@npm:3.4.30, @vue/server-renderer@npm:^3.4.30":
   version: 3.4.30
   resolution: "@vue/server-renderer@npm:3.4.30"
   dependencies:
@@ -1789,6 +1789,8 @@ __metadata:
     "@eslint/js": "npm:^9.5.0"
     "@swc/core": "npm:^1.6.5"
     "@types/node": "npm:^20.14.9"
+    "@vue/compiler-dom": "npm:^3.4.30"
+    "@vue/server-renderer": "npm:^3.4.30"
     autoprefixer: "npm:^10.4.19"
     css-loader: "npm:^7.1.2"
     cypress: "npm:^13.12.0"
