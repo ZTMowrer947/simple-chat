@@ -32,6 +32,9 @@ export default (_env, argv) => {
     },
     optimization: {
       runtimeChunk: 'single',
+      splitChunks: {
+        chunks: 'all',
+      },
     },
     plugins: [
       new HtmlWebpackPlugin({
