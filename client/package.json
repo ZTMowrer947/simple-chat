@@ -12,6 +12,8 @@
     "postinstall": "cd .. && husky client/.husky"
   },
   "dependencies": {
+    "@urql/vue": "^1.3.2",
+    "graphql": "^16.9.0",
     "vue": "^3.4.30"
   },
   "devDependencies": {
