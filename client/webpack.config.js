@@ -19,6 +19,7 @@ export default (_env, argv) => {
       filename: isProduction ? 'assets/[name].[contenthash].js' : 'assets/[name].bundle.js',
     },
     devServer: isProduction ? undefined : {
+      hot: true,
     },
     devtool: isProduction ? false : 'eval-source-map',
     experiments: {
