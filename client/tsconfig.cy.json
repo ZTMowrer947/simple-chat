@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "types": ["cypress"]
+  },
+  "include": ["src/**/*.cy.ts", "src/**/*.cy.tsx", "cypress-component.d.ts"],
+  "exclude": ["cypress/**/*"]
+}
