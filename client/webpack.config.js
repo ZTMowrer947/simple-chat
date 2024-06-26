@@ -34,6 +34,14 @@ export default (_env, argv) => {
         {
           test: /\.[jt]sx$/,
           loader: 'swc-loader'
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'vue-style-loader',
+            'css-loader',
+            'postcss-loader'
+          ]
         }
       ]
     },
