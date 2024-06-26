@@ -124,3 +124,5 @@ dist
 
 # Generated GraphQL code
 resolvers-types.ts
+
+.yarn/
