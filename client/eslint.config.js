@@ -26,11 +26,11 @@ export default tseslint.config(
   {
     files: ['**/*.{cjs,cts}'],
     languageOptions: {
-      globals: globals.commonjs
+      globals: globals.commonjs,
     },
     rules: {
-      '@typescript-eslint/no-var-requires': 'off'
-    }
+      '@typescript-eslint/no-var-requires': 'off',
+    },
   },
   pluginCypress.configs.recommended,
   pluginChaiFriendly.configs.recommendedFlat,

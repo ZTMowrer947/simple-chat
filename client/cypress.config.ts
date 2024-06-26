@@ -1,6 +1,6 @@
-import { defineConfig } from "cypress";
+import { defineConfig } from 'cypress';
 
-import webpackConfig from "./webpack.config";
+import webpackConfig from './webpack.config';
 
 export default defineConfig({
   e2e: {
@@ -11,9 +11,9 @@ export default defineConfig({
 
   component: {
     devServer: {
-      framework: "vue",
-      bundler: "webpack",
-      webpackConfig
+      framework: 'vue',
+      bundler: 'webpack',
+      webpackConfig,
     },
   },
 });
