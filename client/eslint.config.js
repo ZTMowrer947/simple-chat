@@ -1,14 +1,16 @@
 import eslint from '@eslint/js';
 import configPrettier from 'eslint-config-prettier';
+import pluginChaiFriendly from 'eslint-plugin-chai-friendly';
+import pluginCypress from 'eslint-plugin-cypress/flat';
 import pluginImportSort from 'eslint-plugin-simple-import-sort';
-import pluginVue from 'eslint-plugin-vue'
+import pluginVue from 'eslint-plugin-vue';
 import globals from 'globals';
 import tselint from 'typescript-eslint';
-import vueParser from 'vue-eslint-parser'
+import vueParser from 'vue-eslint-parser';
 
 export default tselint.config(
-  { ignores: ["dist/", "node_modules/"] },
-  { files: ["**/*.{js,ts,mjs,cjs,mts,cts,vue}" ] },
+  { ignores: ['dist/', 'node_modules/'] },
+  { files: ['**/*.{js,ts,mjs,cjs,mts,cts,vue}'] },
   {
     languageOptions: {
       globals: globals.browser,
@@ -24,16 +26,18 @@ export default tselint.config(
       parserOptions: {
         parser: tselint.parser,
       },
-    }
+    },
   },
   {
     plugins: {
-      'simple-import-sort': pluginImportSort
+      'simple-import-sort': pluginImportSort,
     },
     rules: {
       'simple-import-sort/imports': 'warn',
-      'simple-import-sort/exports': 'warn'
+      'simple-import-sort/exports': 'warn',
     },
   },
-  configPrettier
-)
+  pluginChaiFriendly.configs.recommendedFlat,
+  pluginCypress.configs.recommended,
+  configPrettier,
+);
