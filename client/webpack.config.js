@@ -1,6 +1,7 @@
 import { resolve } from 'node:path';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { VueLoaderPlugin } from 'vue-loader';
 import webpack from 'webpack';
 
@@ -38,7 +39,7 @@ export default (_env, argv) => {
         {
           test: /\.css$/,
           use: [
-            'vue-style-loader',
+            isProduction ? MiniCssExtractPlugin.loader : 'vue-style-loader',
             'css-loader',
             'postcss-loader'
           ]
@@ -63,6 +64,11 @@ export default (_env, argv) => {
         scriptLoading: 'module',
         template: resolve('src', 'template.html'),
       }),
+      ...(isProduction ? [
+        new MiniCssExtractPlugin({
+          filename: 'assets/[name].[contenthash].css'
+        })
+      ] : [])
     ],
   };
 }
