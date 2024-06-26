@@ -35,6 +35,7 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:2.9.0"],\
           ["postcss", "npm:8.4.38"],\
           ["postcss-loader", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:8.1.1"],\
+          ["prettier", "npm:3.3.2"],\
           ["style-loader", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:4.0.0"],\
           ["swc-loader", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:0.2.6"],\
           ["tailwindcss", "npm:3.4.4"],\
@@ -1678,6 +1679,7 @@ const RAW_RUNTIME_STATE =
           ["mini-css-extract-plugin", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:2.9.0"],\
           ["postcss", "npm:8.4.38"],\
           ["postcss-loader", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:8.1.1"],\
+          ["prettier", "npm:3.3.2"],\
           ["style-loader", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:4.0.0"],\
           ["swc-loader", "virtual:39039a36b9a0bbfe143707f8e7ce1ca9cb97a4a09738c00cd42966fd7c4eedf1e0b8843f8a26e05963b18c42faae30a25a621afd7c1c4db715e657e82984aeee#npm:0.2.6"],\
           ["tailwindcss", "npm:3.4.4"],\
@@ -4672,6 +4674,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/postcss-value-parser-npm-4.2.0-3cef602a6a-f4142a4f56.zip/node_modules/postcss-value-parser/",\
         "packageDependencies": [\
           ["postcss-value-parser", "npm:4.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["prettier", [\
+      ["npm:3.3.2", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.3.2-efeafcaa4b/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
