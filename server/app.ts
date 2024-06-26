@@ -1,7 +1,7 @@
 import { createApp, fromWebHandler } from 'h3';
 
 import { router } from './router.ts';
-import { yoga } from "./yoga.ts";
+import { yoga } from "./graphql/yoga.ts";
 
 export const app = createApp();
 
