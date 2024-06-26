@@ -13,11 +13,10 @@ export default (_env, argv) => {
     mode: isProduction ? 'production' : 'development',
     output: {
       path: resolve('dist'),
-      publicPath: '/assets',
-      filename: isProduction ? '[name].[contenthash].js' : '[name].bundle.js',
+      publicPath: '/',
+      filename: isProduction ? 'assets/[name].[contenthash].js' : 'assets/[name].bundle.js',
     },
     devServer: isProduction ? undefined : {
-      static: './dist',
     },
     devtool: isProduction ? false : 'eval-source-map',
     experiments: {
@@ -31,10 +30,14 @@ export default (_env, argv) => {
         }
       ]
     },
+    optimization: {
+      runtimeChunk: 'single',
+    },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Simple Chat'
+        title: 'Simple Chat',
+        scriptLoading: 'module',
       }),
-    ]
+    ],
   };
 }
