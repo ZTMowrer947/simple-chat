@@ -2,7 +2,7 @@
   <slot></slot>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { cacheExchange, Client, fetchExchange, provideClient } from '@urql/vue';
 
 const client = new Client({
