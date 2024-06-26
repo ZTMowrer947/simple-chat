@@ -18,8 +18,5 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false
   },
-  "exclude": [
-    ".yarn",
-    "node_modules"
-  ]
+  "exclude": [".yarn", "node_modules"]
 }

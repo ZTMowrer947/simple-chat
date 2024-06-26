@@ -17,11 +17,15 @@ export default (_env, argv) => {
     output: {
       path: resolve('dist'),
       publicPath: '/',
-      filename: isProduction ? 'assets/[name].[contenthash].js' : 'assets/[name].bundle.js',
+      filename: isProduction
+        ? 'assets/[name].[contenthash].js'
+        : 'assets/[name].bundle.js',
     },
-    devServer: isProduction ? undefined : {
-      hot: true,
-    },
+    devServer: isProduction
+      ? undefined
+      : {
+          hot: true,
+        },
     devtool: isProduction ? false : 'eval-source-map',
     experiments: {
       outputModule: true,
@@ -34,17 +38,17 @@ export default (_env, argv) => {
         },
         {
           test: /\.[jt]sx$/,
-          loader: 'swc-loader'
+          loader: 'swc-loader',
         },
         {
           test: /\.css$/,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'vue-style-loader',
             'css-loader',
-            'postcss-loader'
-          ]
-        }
-      ]
+            'postcss-loader',
+          ],
+        },
+      ],
     },
     optimization: {
       runtimeChunk: 'single',
@@ -64,11 +68,13 @@ export default (_env, argv) => {
         scriptLoading: 'module',
         template: resolve('src', 'template.html'),
       }),
-      ...(isProduction ? [
-        new MiniCssExtractPlugin({
-          filename: 'assets/[name].[contenthash].css'
-        })
-      ] : [])
+      ...(isProduction
+        ? [
+            new MiniCssExtractPlugin({
+              filename: 'assets/[name].[contenthash].css',
+            }),
+          ]
+        : []),
     ],
   };
-}
+};
