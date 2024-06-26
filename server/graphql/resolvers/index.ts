@@ -1,17 +1,36 @@
-import type { Resolvers } from "../../resolvers-types.ts";
+import { createId } from '@paralleldrive/cuid2';
+import { createPubSub } from '@graphql-yoga/subscription';
+
+import type { Resolvers, Post } from "../../resolvers-types.ts";
+
+const pubSub = createPubSub();
+
+const posts: Post[] = []
 
 export const resolvers = {
   Query: {
     ok: () => true,
-    posts: () => []
+    posts: () => posts,
   },
   Mutation: {
-    createPost: () => null,
+    createPost: (_ctx, args) => {
+      const newPost = {
+        id: createId(),
+        authorName: args.author_name,
+        message: args.message
+      } satisfies Post;
+
+      posts.push(newPost);
+
+      pubSub.publish('postCreated', newPost)
+
+      return newPost;
+    },
   },
   Subscription: {
     postCreated: {
-      subscribe: async function*() {},
-      resolve: () => null,
+      subscribe: () => pubSub.subscribe('postCreated'),
+      resolve: (payload: Post) => payload,
     }
   }
 } satisfies Resolvers;

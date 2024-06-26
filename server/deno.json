@@ -2,6 +2,8 @@
   "imports": {
     "h3": "https://esm.sh/h3@1.11.1",
     "graphql": "npm:graphql",
-    "graphql-yoga": "npm:graphql-yoga@5.4.0"
+    "graphql-yoga": "npm:graphql-yoga@5.4.0",
+    "@graphql-yoga/subscription": "npm:@graphql-yoga/subscription@5.0.1",
+    "@paralleldrive/cuid2": "npm:@paralleldrive/cuid2@2.2.2"
   }
 }

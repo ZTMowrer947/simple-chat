@@ -3,6 +3,9 @@
   "packages": {
     "specifiers": {
       "npm:@graphql-codegen/cli@5.0.2": "npm:@graphql-codegen/cli@5.0.2_graphql@16.9.0",
+      "npm:@graphql-codegen/cli@^5.0.2": "npm:@graphql-codegen/cli@5.0.2_graphql@16.9.0",
+      "npm:@graphql-yoga/subscription@5.0.1": "npm:@graphql-yoga/subscription@5.0.1",
+      "npm:@paralleldrive/cuid2@2.2.2": "npm:@paralleldrive/cuid2@2.2.2",
       "npm:graphql": "npm:graphql@16.9.0",
       "npm:graphql-yoga@5.4.0": "npm:graphql-yoga@5.4.0_graphql@16.9.0"
     },
@@ -983,6 +986,10 @@
         "integrity": "sha512-gbkePEBupNydxCelHCESvFSFM8XPh1Zs/OAVRW/rKpEqPAl5PbOM90Si8mv9bvnR53uPD2s/FiRxdvSejpRJew==",
         "dependencies": {}
       },
+      "@noble/hashes@1.4.0": {
+        "integrity": "sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==",
+        "dependencies": {}
+      },
       "@nodelib/fs.scandir@2.1.5": {
         "integrity": "sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==",
         "dependencies": {
@@ -999,6 +1006,12 @@
         "dependencies": {
           "@nodelib/fs.scandir": "@nodelib/fs.scandir@2.1.5",
           "fastq": "fastq@1.17.1"
+        }
+      },
+      "@paralleldrive/cuid2@2.2.2": {
+        "integrity": "sha512-ZOBkgDwEdoYVlSeRbYYXs0S9MejQofiVYoTbKzy/6GQa39/q5tQU2IX46+shYnUkpEl3wc+J6wRlar7r2EK2xA==",
+        "dependencies": {
+          "@noble/hashes": "@noble/hashes@1.4.0"
         }
       },
       "@peculiar/asn1-schema@2.3.8": {
@@ -2664,6 +2677,8 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:@graphql-yoga/subscription@5.0.1",
+      "npm:@paralleldrive/cuid2@2.2.2",
       "npm:graphql",
       "npm:graphql-yoga@5.4.0"
     ],
